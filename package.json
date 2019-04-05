@@ -1,16 +1,23 @@
 {
   "name": "carinventory",
   "version": "0.0.0",
+  "engines": {
+  "node": "v8.9.4",
+  "npm": "5.6.0"
+},
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
+    "start": "node server.js",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "postinstall": "ng build --output-path angularapp  --aot --prod"
   },
   "private": true,
   "dependencies": {
+    "@angular/cli": "~7.0.0-rc.1",
+    "@angular/compiler-cli": "~7.0.0-rc.0",
     "@angular/animations": "~7.0.0-rc.0",
     "@angular/common": "~7.0.0-rc.0",
     "@angular/compiler": "~7.0.0-rc.0",
@@ -24,7 +31,8 @@
     "core-js": "^2.5.4",
     "ngx-bootstrap": "^4.0.0",
     "rxjs": "~6.3.3",
-    "zone.js": "~0.8.26"
+    "zone.js": "~0.8.26",
+    "typescript": "~3.1.1"
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "~0.9.0-rc.1",
@@ -46,9 +54,5 @@
     "ts-node": "~7.0.0",
     "tslint": "~5.11.0",
     "typescript": "~3.1.1"
-  },
-  "engines": {
-  "node": "v8.11.4",
-  "npm": "5.8.0"
-}
+  }
 }
